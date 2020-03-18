@@ -24,7 +24,7 @@ public class ExtentReportListener implements IReporter {
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) {
 		extent = new ExtentReports(outputDirectory + File.separator
-				+ "AutomationPractice_ExtentReport.html", true);
+				+ "DummyRESTAPI_ExtentReport.html", true);
 
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
@@ -42,6 +42,7 @@ public class ExtentReportListener implements IReporter {
 		extent.close();
 	}
 
+	
 	private void buildTestNodes(IResultMap tests, LogStatus status) {
 		ExtentTest test;
 
